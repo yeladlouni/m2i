@@ -27,18 +27,18 @@ SELECT COUNT(1), MIN(salary), MAX(salary), AVG(salary), VARIANCE(salary), STDDEV
 FROM employees
 WHERE job_id LIKE '%REP%';
 
--- Le nombre des prénoms des employés avec les doublons
+-- Le nombre des prï¿½noms des employï¿½s avec les doublons
 
 SELECT COUNT(first_name)
 FROM employees;
 
 
--- Afficher le comptes des prénoms distincts d'employés
+-- Afficher le comptes des prï¿½noms distincts d'employï¿½s
 
 SELECT COUNT(DISTINCT first_name)
 FROM employees;
 
--- La fonction AVG pour une colonne qui contient des null, le COUNT est différent pour les deux requêtes 
+-- La fonction AVG pour une colonne qui contient des null, le COUNT est diffï¿½rent pour les deux requï¿½tes 
 
 SELECT AVG(commission_pct)
 FROM employees;
@@ -46,16 +46,17 @@ FROM employees;
 SELECT AVG(NVL(commission_pct, 0))
 FROM employees;
 
--- Afficher le salaire total par département
+-- Afficher le salaire total par dï¿½partement
 
 SELECT department_id, SUM(salary)
 FROM employees
 GROUP BY department_id
 
--- Ecrire une requête qui permet d'afficher le salaire total par département et par fonction
+-- Ecrire une requï¿½te qui permet d'afficher le salaire total par dï¿½partement et par fonction
 
 SELECT department_id, SUM(salary) "Somme des salaires", COUNT(employee_id)
 FROM employees
 WHERE job_id LIKE '%REP%'
 GROUP BY department_id
 HAVING COUNT(employee_id) = 1;
+
