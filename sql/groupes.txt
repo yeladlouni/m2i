@@ -1,0 +1,53 @@
+1er groupe
+
+Delphine
+Ahmad
+Willy
+
+Projet: Wikipedia est une base de connaissances open source où plusieurs contributeurs participent
+Afin d'ajouter un contenu sous forme d'articles.
+L'objectif est de mettre en place un projet en utilisant Python, Spark, ElasticSearch...
+afin de permettre aux utilisateurs
+de poser des questions et de renvoyer l'ensemble des documents qui contiennent l'information
+Indication: Wikipedia met en place un ensemble de dumps qui contiennent l'ensemble des documents
+
+=> Question/Answering : Chatbot
+
+2ème groupe
+
+Afaf
+Majid
+Mehdi Fouad
+
+Projet: Utiliser Tripadvison afin de collecter l'ensemble des données relatives aux différentes
+entités (Restaurants, hôtels, POI...), classer les différents avis des clients selon l'echelle 
+Satisfait, Pas Satisfait ou Neutre pour les différents services (Propreté, Prix...)
+==> Sentiment analysis
+
+3ème groupe
+
+Emna
+Mehdi Rachach
+Frederic
+
+Projet: Utiliser les données YELP afin de recommander les différents business pour les différents
+utilisateurs selon leur intérêts.
+=> Système de recommandation
+
+4ème groupe
+
+Younes
+Yersin
+Adeline
+Amine
+
+Projet: Collecter les tweets pour les 6 dernièrs mois, extraire les tweets qui sont en relation avec
+COVID-19 et afficher le sentiment de l'utilisateur, Optimistic, Pessimistic, Neutral, Sarcastic
+
+
+
+Certifications: 
+
+Cloudera & Hortonworks
+GCP Cloud, Big Data
+AWS Big Data, Cloud Architect Associate, Cloud Architect Professional
