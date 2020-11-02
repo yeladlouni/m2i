@@ -44,7 +44,7 @@ Amine
 Projet: Collecter les tweets pour les 6 dernièrs mois, extraire les tweets qui sont en relation avec
 COVID-19 et afficher le sentiment de l'utilisateur, Optimistic, Pessimistic, Neutral, Sarcastic
 
-
+==> Opinion Mining
 
 Certifications: 
 
