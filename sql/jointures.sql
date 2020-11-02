@@ -82,4 +82,11 @@ ORDER BY COUNT(employee_id);
 -- Ecrire une requï¿½te pour afficher le total des salaires par dï¿½partement, afficher 0 pour les dï¿½partements auquels aucun 
 -- employï¿½ n'est affectï¿½
 
+-- Une autre manière d'écrire les jointures
 
+SELECT emp1.first_name, emp2.first_name
+FROM employees emp1, employees emp2
+WHERE emp1.employee_id = emp2.manager_id
+
+-- Ecrire une requête afin d'afficher pour chaque nom de région, le nombre total des employés
+-- Afficher 0 pour les régions sans employés
