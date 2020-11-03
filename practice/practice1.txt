@@ -1,0 +1,17 @@
+Shell:
+
+Sauvegarder les fichiers sur un dossier Ubuntu
+Ecrire des scripts shell pour:
+* Afficher pour chaque employé: Son identifiant, prénom, nom, et le nom du départment auquel il est affecté
+* Afficher pour chaque employé: son identifiant, prénom, nom, et le nom de la région où il est situé
+* Afficher les employés du départment 100
+* Pour chaque pays, afficher le nombre d'employés correspondants
+
+SQL:
+
+Ecrire des requêtes SQL afin de renvoyer les informations suivantes:
+
+* Les employés qui ont un numéro de tél sous le format XXX.XXX.XXXX
+* Pour chaque employé, Le nombre d'années d'expérience
+* Les employés qui ont été recrutés en mois de Mars
+* Les employés dont le salaire est supérieur au salaire moyen
