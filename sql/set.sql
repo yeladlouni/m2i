@@ -52,10 +52,13 @@ FROM employees;
 
 -- Ecrire une requête en utilsiant MINUS afin de renvoyer l'id de l'employé ainsi que son nom complet pour les employés de la région d'amérique
 
-SELECT *
+SELECT employee_id, first_name || ' ' || last_name
 FROM employees
-WHERE department_id = 10
 MINUS
-SELECT *
-FROM departments
-WHERE manager_id IS NULL;
+SELECT employee_id, first_name || ' ' || last_name
+FROM employees
+JOIN departments USING (department_id)
+JOIN locations USING (location_id)
+JOIN countries USING (country_id) 
+JOIN regions USING (region_id)
+WHERE LOWER(region_name) <> 'americas';
