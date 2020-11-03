@@ -99,3 +99,57 @@ ROLLBACK TO B;
 -- Mettre à jour l'email de l'employé afin de le mettre en majuscules
 -- Supprimer cet employé
 -- Valider jusqu'à la MAJ afin que l'employé ne soit pas supprimé
+
+CREATE TABLE employees__usa
+
+ AS
+
+ --SELECT employee_id, first_name, last_name name, department_id, hire_date, email, country_id
+
+ SELECT emp.*
+
+ FROM employees emp
+
+ JOIN departments dpt ON (dpt.department_id = emp.employee_id)
+
+ JOIN locations USING(location_id)
+
+ JOIN countries USING(country_id)
+
+ WHERE country_id = 'US';
+
+
+
+--DESCRIBE employees__usa;
+
+ --SELECT *
+
+ --FROM employees__usa;
+
+
+
+INSERT INTO employees__usa (EMPLOYEE_ID, FIRST_NAME, LAST_NAME, EMAIL, PHONE_NUMBER, HIRE_DATE, JOB_ID, SALARY,COMMISSION_PCT, MANAGER_ID, DEPARTMENT_ID)
+
+ VALUES ( '208', NULL, 'Dummy', 'test@gmail.com', NULL, '01/05/2020', 'SA_REP', NULL, NULL, NULL, NULL);
+
+
+
+UPDATE employees__usa
+
+ SET email = UPPER(email)
+
+ WHERE employee_id= 208;
+
+
+
+SAVEPOINT A;
+
+
+
+DELETE FROM employees__usa
+
+ WHERE employee_id =208;
+
+
+
+COMMIT TO A;
