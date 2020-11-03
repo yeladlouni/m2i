@@ -27,13 +27,40 @@ WHERE job_id IN (SELECT job_id
             WHERE job_title LIKE ('P%'))
             
 
---
+-- Ecrire la requête en utilisant les jointures au lieu des sous-requêtes
 
+SELECT emp1.department_id, emp2.department_id
+FROM employees emp1
+CROSS JOIN employees emp2
+WHERE emp2.department_id = 50
+GROUP BY emp1.department_id, emp2.department_id
+HAVING MIN(emp1.salary) > MIN(emp2.salary)
 
-SELECT department_id, MIN(salary)
+-- Sous-requêtes avec des enregistrements multiples
+
+-- IN renvoyer tous les employés qui sont affectés à un département qui se termine avec 'ing' 
+
+SELECT *
 FROM employees
-GROUP BY department_id
-HAVING MIN(salary) > (SELECT MIN(SALARY)
-                      FROM employees
-                      WHERE department_id = 50)
+WHERE department_id IN (SELECT department_id
+                        FROM departments
+                        WHERE department_name LIKE '%ing')
 
+-- ANY  Une parmi les conditions est vérifiée
+
+SELECT *
+FROM employees
+WHERE salary < ANY (SELECT DISTINCT salary
+                    FROM employees
+                    WHERE job_id = 'IT_PROG');
+
+-- ALL Toutes les conditions doivent être vérifiées
+
+
+SELECT *
+FROM employees
+WHERE salary < ALL (SELECT DISTINCT salary
+                    FROM employees
+                    WHERE job_id = 'IT_PROG');
+                    
+                    
