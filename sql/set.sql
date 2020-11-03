@@ -44,3 +44,18 @@ FROM employees;
 -- A U B  = B U A  
 -- A ^ B = B ^ A 
 -- A - B <> B - A
+
+-- UNION ALL permet de renvoyer l'ensemble des résultats y compris les doublons
+
+-- MINUS  permet de renvoyer les enregistements qui sont sur la première table et pas ceux qui sont sur la deuxième table
+
+
+-- Ecrire une requête en utilsiant MINUS afin de renvoyer l'id de l'employé ainsi que son nom complet pour les employés de la région d'amérique
+
+SELECT *
+FROM employees
+WHERE department_id = 10
+MINUS
+SELECT *
+FROM departments
+WHERE manager_id IS NULL;
