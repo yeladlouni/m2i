@@ -15,16 +15,19 @@ CREATE TABLE products
     (
         serial_number NUMBER(6),
         label VARCHAR2(30),
-        price_ht NUMBER(6,2),
-        price_ttc NUMBER(6,2),
-        expiration_date DATE,
+        price_ht NUMBER(6,2) DEFAULT 5,
+        price_ttc NUMBER(6,2) DEFAULT 5,
+        expiration_date DATE DEFAULT SYSDATE,
         category_id NUMBER(4),
         CONSTRAINT prd_serial_number_pk PRIMARY KEY (serial_number),  -- nom mnémonique  facile à retenir
         CONSTRAINT prd_label_uk UNIQUE (label),
         CONSTRAINT prd_cat_category_id_fk FOREIGN KEY (category_id)
             REFERENCES categories(category_id)
-            ON DELETE SET NULL
+            ON DELETE SET NULL,
             --ON DELETE CASCADE
+        CONSTRAINT prd_price_ht_min CHECK (price_ht > 0),
+        CONSTRAINT prd_price_ttc_min CHECK (price_ttc > 0),
+        CONSTRAINT prd_expiration_date_min CHECK (expiration_date > TO_DATE('04/11/2020', 'MM/DD/YYYY'))
     );
     
 INSERT INTO products VALUES(1111, 'Imprimante', 100, 120, '12/12/2021', 10);
@@ -51,4 +54,8 @@ FROM categories
 WHERE category_id = 20;
 
 COMMIT;
+
     
+INSERT INTO products(serial_number, label, price_ht, price_ttc, category_id) VALUES(1119, 'Dummy', 0.2, 0.1, 10);
+
+
