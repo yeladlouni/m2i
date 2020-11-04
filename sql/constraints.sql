@@ -1,0 +1,6 @@
+-- Ecrire une requête afin de créer une table products qui permet de stocker les produits avec les informations suivantes:
+-- serial_number est la colonne permettant de stocker l'id de chaque produit
+-- label pour stocker son libellé
+-- price_ht pour stocker son prix HT
+-- price_ttc pour stocker son prix TTC
+-- expiration_date pour stocker la date d'expiration du produit
