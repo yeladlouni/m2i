@@ -15,3 +15,20 @@ Ecrire des requêtes SQL afin de renvoyer les informations suivantes:
 * Pour chaque employé, Le nombre d'années d'expérience
 * Les employés qui ont été recrutés en mois de Mars
 * Les employés dont le salaire est supérieur au salaire moyen
+
+Exercice global SQL
+
+Ecrire un script qui permet de 
+
+1. Créer un utilisateur university en spécifiant un mot de passe
+2. Créer les rôles suivants: administration, professeur, etudiant
+3. Créer les tables suivantes avec les colonnes nécessaires:
+* Students avec un ID, first_name, last_name, birth_date, address, ville, pays
+* Modules avec l'ID, label, start_date, end_date
+* Notes qui contient pour chaque utilisateur et chaque module, la note finale pour le module en question
+  ses colonnes sont: ID de l'étudiant, l'ID du module, Date d'examen, score
+* Les notes peuvent être modifiées/supprimées par l'administration et les professeurs mais pas par les étudiants
+  mais elles peuvent être consultées par les étudiants
+* Pour une année académique qui commence le 01/09 et se termine le 30/06 de chaque année, 
+afficher pour chaque utilisateur la note finale pour l'ensemble des Modules
+* Sachant que la note finale de succès pour un étudiant est 10, afficher les étudiants qui ont pu valider l'année académique
