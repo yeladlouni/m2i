@@ -24,13 +24,22 @@ CREATE TABLE products
             REFERENCES categories(category_id)
     );
     
-    
+INSERT INTO products VALUES(1111, 'Imprimante', 100, 120, '12/12/2021', 10);
+INSERT INTO products VALUES(1111, 'Laptop', 100, 120, '12/12/2021', 10);
+INSERT INTO products VALUES(1111, 'Airpods', 100, 120, '12/12/2021', 20);
+INSERT INTO products VALUES(1111, 'Micro', 100, 120, '12/12/2021', 20);
+INSERT INTO products VALUES(1111, 'TV', 100, 120, '12/12/2021', 20);
+
+COMMIT;
+
 CREATE TABLE categories
     (
         category_id NUMBER(4) CONSTRAINT cat_category_id_pk PRIMARY KEY,
         label VARCHAR2(30)
     );
 
+INSERT INTO categories VALUES(10,'Bureautique');
+INSERT INTO categories VALUES(20,'Multimédia');
 
     
     
