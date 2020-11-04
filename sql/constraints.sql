@@ -7,6 +7,7 @@
 
 -- Ajouter une table categories avec l'id de la catégorie et le libellé de la catégorie
 -- Ajouter une clé étrangère à la table products afin de la relier à la table categories "prd_cat_category_id_fk"
+-- Ajouter des contraintes afin de n'accepter que les prix > 0 et les dates d'expiration supérieures à la date d'aujourd'hui
 
 DROP TABLE products;
 
@@ -22,13 +23,15 @@ CREATE TABLE products
         CONSTRAINT prd_label_uk UNIQUE (label),
         CONSTRAINT prd_cat_category_id_fk FOREIGN KEY (category_id)
             REFERENCES categories(category_id)
+            ON DELETE SET NULL
+            --ON DELETE CASCADE
     );
     
 INSERT INTO products VALUES(1111, 'Imprimante', 100, 120, '12/12/2021', 10);
-INSERT INTO products VALUES(1111, 'Laptop', 100, 120, '12/12/2021', 10);
-INSERT INTO products VALUES(1111, 'Airpods', 100, 120, '12/12/2021', 20);
-INSERT INTO products VALUES(1111, 'Micro', 100, 120, '12/12/2021', 20);
-INSERT INTO products VALUES(1111, 'TV', 100, 120, '12/12/2021', 20);
+INSERT INTO products VALUES(1112, 'Laptop', 100, 120, '12/12/2021', 10);
+INSERT INTO products VALUES(1113, 'Airpods', 100, 120, '12/12/2021', 20);
+INSERT INTO products VALUES(1114, 'Micro', 100, 120, '12/12/2021', 20);
+INSERT INTO products VALUES(1115, 'TV', 100, 120, '12/12/2021', 20);
 
 COMMIT;
 
@@ -41,5 +44,11 @@ CREATE TABLE categories
 INSERT INTO categories VALUES(10,'Bureautique');
 INSERT INTO categories VALUES(20,'Multimédia');
 
-    
+INSERT INTO categories VALUES(30,'Dummy');
+
+DELETE 
+FROM categories 
+WHERE category_id = 20;
+
+COMMIT;
     
