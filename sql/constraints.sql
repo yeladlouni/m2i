@@ -19,7 +19,9 @@ CREATE TABLE products
         expiration_date DATE,
         category_id NUMBER(4),
         CONSTRAINT prd_serial_number_pk PRIMARY KEY (serial_number),  -- nom mnémonique  facile à retenir
-        CONSTRAINT prd_label_uk UNIQUE (label)
+        CONSTRAINT prd_label_uk UNIQUE (label),
+        CONSTRAINT prd_cat_category_id_fk FOREIGN KEY (category_id)
+            REFERENCES categories(category_id)
     );
     
     
