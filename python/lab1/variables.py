@@ -32,8 +32,18 @@ print(first_name + " " + last_name)
 
 # On peut aussi utiliser ce qu'on appelle les f-strings, le f dénote format
 
-print(f"Le nom complet est: {first_name} {last_name}.")
+print(f"Le nom complet est: {first_name.title()} {last_name}.")
 
-# Ecrire une commande python afin d'afficher le first_name et le last_name avec les initiaux en majuscules
+# Ecrire une commande python afin d'afficher le first_name et le last_name avec les initiaux en majuscules: Dupont Lewis
+
+print(f"Le nom complet est: {first_name.title()} {last_name.title()}")
+
+# On peut utiliser les espaces "whitespaces" afin de formater le code avec des espaces, tabulation et retours à la ligne
+# \n permet le retour à la ligne "new line"
+# \t permet d'ajouter une tabulation "tabulation"
+# \n et \t sont appelés caractères d'échappement "Escape caracters"
+
+print(f"Le nom complet est:\n \t {first_name.title()} {last_name.title()}")
+
 
 
