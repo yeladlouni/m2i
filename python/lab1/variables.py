@@ -69,3 +69,42 @@ print(message.endswith("fin.")) # Vérifier si une chaîne de caractères se ter
 print(message.find("espaces")) # Chercher un pattern dans une chaîne de caractères
 print("303933".isalnum()) # Vérifier si tous les caractères sont numériques
 print(message.replace("espaces", "whitespaces"))
+
+
+# Nombre pour stocker des valeurs numériques: les deux types de variable numériques sont integer ou float
+
+employees = 30  # variable integer
+salary = 3200.84 # variable float
+
+print(f"Le nombre d'employés est: {employees * 2} et le salaire est: {salary / 3}")
+
+# ** est utilisé pour la puissance
+
+print(2 ** 3)
+
+# On peut utiliser des espaces soulignés "underscores" afin de séparer les chiffres
+
+salary = 12_344_323.333_111
+
+print(salary)
+
+# Regrouper l'initialisation et l'affectation des variables sur une seule ligne
+
+employees, salary, temperature = 30, 3420.11, 27
+
+print(employees)
+print(salary)
+print(temperature)
+
+# Python n'a pas de type constante, mais on peut utiliser des variable en majuscule pour dénoter les constantes
+
+TVA = 0.2
+
+print(TVA)
+
+print("1ère ligne")
+
+print("deuxième ligne")
+
+import this
+
