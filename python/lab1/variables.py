@@ -57,3 +57,15 @@ print(message.lstrip())
 
 message = "\n\t\t\n    Ceci est un message avec des espaces au début et des espaces à la fin.\n\n   \t"
 
+message = message.lstrip().rstrip()
+
+print(message)
+
+print(len(message))
+
+print(message.capitalize()) # Mettre la première lettre en majuscules
+print(message.count("un")) # Compter le nombre d'occurrences d'une chaîne de caractères
+print(message.endswith("fin.")) # Vérifier si une chaîne de caractères se termine avec l'argument précisé
+print(message.find("espaces")) # Chercher un pattern dans une chaîne de caractères
+print("303933".isalnum()) # Vérifier si tous les caractères sont numériques
+print(message.replace("espaces", "whitespaces"))
