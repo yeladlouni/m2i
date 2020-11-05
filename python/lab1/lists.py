@@ -151,3 +151,26 @@ print('*' * 20)
 # Afficher les mois dans l'ordre inverse
 # Remplacer le mois Juin avec l'équivalent en anglais
 
+months = ['Janvier', 'Février', 'Mars', 'Avril', 'Mai', 'Juin', 'Juillet', 'Août',
+          'Septembre', 'Novembre', 'Décembre']
+
+print(sorted(months))  # sorted permet de trier la liste sans effet secondaire / side effect
+
+print(list(reversed(months)))  # reversed permet d'inverser la liste sans effet secondre
+
+months[5] = 'June'
+
+print(months)
+
+
+#  split permet de diviser une chaine de caractères selon un séparateur
+
+days = "Lundi;Mardi;Mercredi;Jeudi;Vendredi;Samedi;Dimanche"
+
+days_list = days.split(';')
+
+print(days_list)
+
+# join permet de joindre les élements d'une list
+
+print('|'.join(employees))
