@@ -45,5 +45,15 @@ print(f"Le nom complet est: {first_name.title()} {last_name.title()}")
 
 print(f"Le nom complet est:\n \t {first_name.title()} {last_name.title()}")
 
+message = "Ceci est un texte avec un espace à la fin     "
 
+print(message.rstrip())
+
+message = "\n\t    Ceci un message avec un retour à la ligne, une tabulation est des espaces."
+print(message)
+print(message.lstrip())
+
+# Ecrire une instruction Python afin de retirer les espaces du début et de la fin de la variable message
+
+message = "\n\t\t\n    Ceci est un message avec des espaces au début et des espaces à la fin.\n\n   \t"
 
