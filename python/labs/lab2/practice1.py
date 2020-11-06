@@ -1,6 +1,3 @@
-# Ecrire un script shell afin d'extraire la liste des pays depuis le fichiers countries.txt et le stocker dans un fichier
-# countries.processed
-
 # Ecrire un script python afin de:
 # Créer une liste composée des noms de pays
 # Trier la liste selon un ordre alphabétique décroissant
