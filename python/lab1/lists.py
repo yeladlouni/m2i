@@ -178,5 +178,42 @@ print('|'.join(employees))
 # Afficher les mois de l'année
 
 for month in months:
-    print(month)
+    print(f"Le mois en question est {month.upper()}")
+
+
+for value in range(0,5):
+    print(value)
+
+numbers = list(range(5))
+
+print(numbers)
+
+even_numbers = list(range(0, 10, 2))
+
+print(even_numbers)
+
+odd_numbers = list(range(1, 10, 2))
+
+print(odd_numbers)
+
+odd_numbers_reversed = list(range(1, 10, 1))
+
+print(odd_numbers_reversed[::-1])
+
+for value in range(1, 11):
+    squared = value ** 2
+    print(squared)
+
+print(numbers)
+
+print(min(numbers), max(numbers), sum(numbers))
+
+squared_numbers = [value ** 2 for value in numbers]
+
+print(squared_numbers)
+
+# Ecrire un one liner pour afficher les carrés des valeurs de 4 jusqu'à 9
+
+
+
 
