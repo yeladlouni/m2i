@@ -214,6 +214,20 @@ print(squared_numbers)
 
 # Ecrire un one liner pour afficher les carrés des valeurs de 4 jusqu'à 9
 
+squared_numbers = [value ** 2 for value in list(range(4, 10))]
+
+print(squared_numbers)
 
 
+cars = ('Audi', 'BMW', 'Volkswagen', 'Renault', 'Peugeot', 'Citroën')
+
+cars_list = list(cars)
+
+cars_list[0] = 'Mercedes'
+
+print(cars_list)
+
+numbers_tuple = tuple(numbers)
+
+print(numbers_tuple)
 
