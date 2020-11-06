@@ -174,3 +174,9 @@ print(days_list)
 # join permet de joindre les élements d'une list
 
 print('|'.join(employees))
+
+# Afficher les mois de l'année
+
+for month in months:
+    print(month)
+
