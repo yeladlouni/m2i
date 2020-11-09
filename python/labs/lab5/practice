@@ -1,0 +1,7 @@
+Ecrire un script afin de:
+
+* Récupérer le tableau des cas COVID-19 du site worldmeter en utilisant pandas
+* Afficher la liste des 10 pays les plus touchés selon le nombre de morts
+* Afficher pour la france, la population et le nombre de tests effectués
+* Convertir les données en un tableau de dictionnaires
+* Afficher les pays qui ont des au delà de la moyenne globale
