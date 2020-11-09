@@ -5,3 +5,12 @@ Ecrire un script afin de:
 * Afficher pour la france, la population et le nombre de tests effectués
 * Convertir les données en un tableau de dictionnaires
 * Afficher les pays qui ont des cas au delà de la moyenne globale
+
+
+Ecrire un script python afin de:
+
+* Récupérer les données du jours pour les cas corona virus
+* Récupérer les données d'hier pour les cas corona
+* Récupréer les données d'avant hier des cas corona
+* Afficher le nombre de cas d'hier, d'aujourd'hui et d'avant hier pour chaque pays:
+* Exporter les résultats sous forme d'excel
