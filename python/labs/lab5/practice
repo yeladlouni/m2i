@@ -4,4 +4,4 @@ Ecrire un script afin de:
 * Afficher la liste des 10 pays les plus touchés selon le nombre de morts
 * Afficher pour la france, la population et le nombre de tests effectués
 * Convertir les données en un tableau de dictionnaires
-* Afficher les pays qui ont des au delà de la moyenne globale
+* Afficher les pays qui ont des cas au delà de la moyenne globale
