@@ -1,0 +1,7 @@
+Ecrire un script afin de:
+
+* Afficher le total des salaires par region
+* Afficher le total des salaires par country
+* Afficher les 10 premiers employés en terme de salaire
+* Afficher pour chaque département (nom du département) la date minimale et maximale de recrutement
+* Afficher pour chaque fonction (job_title) le nombre total des employés
