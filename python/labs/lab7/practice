@@ -5,3 +5,39 @@ Ecrire un script afin de:
 * Afficher les 10 premiers employés en terme de salaire
 * Afficher pour chaque département (nom du département) la date minimale et maximale de recrutement
 * Afficher pour chaque fonction (job_title) le nombre total des employés
+
+
+Structures de données: Data structures
+
+Deux types de variables:
+
+scalaires: entiers (int), décimaux (float), texte (string), booléens (bool)
+collections: listes (list) dictionnaires (dictionary) n-uplets (tuples) ensembles (set)
+
+Structures conditionnelles = Expressions booléennes
+
+if expression:
+elif expression:
+elif expression:
+else:
+
+Boucles/Loops
+
+while: break, continue
+for
+comprehsion list
+
+Fonctions
+
+Classes => objects
+
+Fichiers
+
+Gestion des exceptions
+
+
+
+itertools pandas
+
+scikit => machine learning
+pytorch => deep learning, réseeaux de neuronnes,
