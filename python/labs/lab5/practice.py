@@ -11,6 +11,8 @@ data_france = df.loc[df['Country,Other'] == 'France']  # Série
 population_france = int(data_france['Population'].values[0])
 tests_france = int(data_france['TotalTests'].values[0])
 
+
+
 print(f"Population: {population_france}\nTests: {tests_france}")
 
 corona_list = df.to_dict('records') # to_dict permet d'obtenir une liste de dictionnaires
