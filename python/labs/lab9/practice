@@ -7,3 +7,5 @@ Ecrire un script python pour:
     {'first_name': '', 'last_name': '', department_name: 'Shipping'},
     {'first_name': '', 'last_name': '', department_name: 'Shipping'}
 ]
+
+{'10': 'Shipping', '20']
