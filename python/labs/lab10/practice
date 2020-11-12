@@ -1,0 +1,19 @@
+Ecrire un script Python pour :
+
+Créer une classe Employee avec les attributs et les méthodes suivantes:
+
+* id
+* firstName
+* lastName
+* hireDate
+
+Créer Les méthodes suivantes pour la classe Employee:
+
+* hire: elle permet de changer la valeur de la date d'embauche à l'argument passé
+* fire: elle permet de supprimer l'employé de la liste
+* resign: elle permet d'afficher le message "Employé démissionné"
+
+En utilisant une boucle ou une comprehension list, créer des objets contenant les différents employés contenus
+dans le fichier employees.csv
+
+Exécuter la méthode fire pour remercier l'employé dont l'id est 120
