@@ -1,0 +1,9 @@
+Ecrire un script python pour:
+
+* Lire le fichier employees.csv et departments.csv
+* Ecrire un fichier contenant pour chaque employé le first_name, last_name, department_name sous forme de JSON
+[
+    {'first_name': '', 'last_name': '', department_name: 'Shipping'},
+    {'first_name': '', 'last_name': '', department_name: 'Shipping'},
+    {'first_name': '', 'last_name': '', department_name: 'Shipping'}
+]
