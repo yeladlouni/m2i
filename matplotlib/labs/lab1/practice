@@ -7,9 +7,18 @@ Ecrire un script en utilisant python, matplotlib pour afficher la courbe des sal
 
 Afficher un tracé pour chaque salaire le nombre d'employés qui le perçoivent
 
-1. Lire les données de salaire depuis le fichier employé
+1. Lire les données de salaire depuis le fichier employees.csv
 2. Stocker les valeurs dans une liste
 3. Créer un dictionnaire sous forme {1200: 3, 3000: 2, 1300: 1} pour stocker pour chaque salaire
 le nombre d'employés qui le perçoivent
 4. En utilisant la fonction plot, afficher le diagramme où x est le salaire et y est le nombre d'employés qui
 perçoivent ce salaire
+
+
+Comparer les salaires des deux départements Shipping et Sales
+
+1. Lires les données de salaires depuis le fichier employees.csv
+2. Créer deux listes pour stocker les salaires pour les 2 départements
+3. Créer deux tracés pour les deux départements
+4. Créer un troisième tracé pour comparer les salaires des deux départements
+
