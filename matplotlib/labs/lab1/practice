@@ -1,0 +1,7 @@
+Ecrire un script en utilisant python, matplotlib pour afficher la courbe des salaires des employés
+
+1. Lire les données salaire à partir du fichier employees.csv
+2. Stocker les données sous forme de liste dénotée employees
+3. Utiliser la fonction plot pour afficher la courbe des salaires
+4. Afficher une courbe pour la médiane, le min, le max et la moyenne des salaires
+

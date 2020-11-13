@@ -7,3 +7,5 @@
 3. SQL
 4. SQL avancé
 5. Python
+6. Matplotlib, Django
+7. Web Scrapping
