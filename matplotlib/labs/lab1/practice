@@ -5,3 +5,11 @@ Ecrire un script en utilisant python, matplotlib pour afficher la courbe des sal
 3. Utiliser la fonction plot pour afficher la courbe des salaires
 4. Afficher une courbe pour la médiane, le min, le max et la moyenne des salaires
 
+Afficher un tracé pour chaque salaire le nombre d'employés qui le perçoivent
+
+1. Lire les données de salaire depuis le fichier employé
+2. Stocker les valeurs dans une liste
+3. Créer un dictionnaire sous forme {1200: 3, 3000: 2, 1300: 1} pour stocker pour chaque salaire
+le nombre d'employés qui le perçoivent
+4. En utilisant la fonction plot, afficher le diagramme où x est le salaire et y est le nombre d'employés qui
+perçoivent ce salaire
