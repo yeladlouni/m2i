@@ -1,0 +1,13 @@
+Ecrire un script python afin de:
+
+* Afficher pour les six variables contenu dans le fichier california_housing_train.csv un sous tracé
+pour chaque combinaison de variables (households, population), (population, total_rooms)...
+ - households
+ - population
+ - median_income
+ - total_bedrooms
+ - total_rooms
+ - housing_median_age
+
+* Déduire les variables qui sont corrélées (une relation peut existe entre les deux variables)
+i.e une variable peut être déduite à partir de l'autre
