@@ -1,0 +1,9 @@
+Ecrire un script python afin de:
+
+* Ajouter un sous tracé ax
+* Dessiner un graphique à partir des valeurs aléatoires de 1000 valeurs cumulées (en utilisant numpy)
+* Afficher la graduation par défaut
+* Changer la graduation en utilisant des pas de 5 (0, 5, 10, 15....)
+* Appliquer des étiquettes de la forme xi où i € (0, 5, 10, ....)
+
+
