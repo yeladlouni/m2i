@@ -4,5 +4,5 @@ Ecrire un script Python afin de:
 * Créer une Series pour chaque colonne du fichier
 * Créer un DataFrame df1 à partir des Series
 * Créer un DataFrame df2 en utilisant un dictionnaire de listes
-* Créer un DataFrame df3 en utilisant un dictionnaire de dictionnaire
+* Créer un DataFrame df3 en utilisant un dictionnaire de dictionnaires
 * Eliminer les employés qui n'appartiennet à aucun département
