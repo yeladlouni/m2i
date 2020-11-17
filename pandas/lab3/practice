@@ -3,5 +3,5 @@ Ecrire un script python afin de:
 * Charger les donées employees depuis le fichier employees.csv et les stocker dans un DataFrame
 * Afficher les employés qui ont une commission
 * Afficher le salaire de Jennifer Whalen
-* Afficher le nom complet des employés qui sont dans le départment 50 et qui ont un salaire > 3000
+* Afficher le nom complet des employés qui sont dans le département 50 et qui ont un salaire > 3000
 * Afficher le nom complet des managers
