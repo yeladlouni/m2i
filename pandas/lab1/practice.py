@@ -44,3 +44,31 @@ with open('../../data/hr/employees.csv') as f:
 
 # En utilisant un dictionnaire de dictionnaires
 
+    with open('../../data/hr/employees.csv') as f:
+        # 1ère méthode en utilisant f.readlines() pour renvoyer la liste des lignes du fichie
+        lines = f.readlines()
+
+        columns = 'EMPLOYEE_ID;FIRST_NAME;LAST_NAME;EMAIL;PHONE_NUMBER;HIRE_DATE;' \
+                  'JOB_ID;SALARY;COMMISSION_PCT;MANAGER_ID;DEPARTMENT_ID'.split(';')
+
+        data = {
+            column: {i: line[1:-3].split(';')[j] for i, line in enumerate(lines) if 'EMPLOYEE_ID' not in line}
+                    for j, column in enumerate(columns)
+        }
+
+        df3 = pd.DataFrame(data)
+
+        print(df3)
+
+# Eliminer les employés n'appartenant à aucun département
+import numpy as np
+
+# flager les lignes dont le département est vide
+df4 = df3[df3['DEPARTMENT_ID'] != '']
+print(df4)
+
+# En utilisant np.nan
+df3[df3.DEPARTMENT_ID == ''] = np.nan
+df5 = df3.dropna()
+
+print(df5)
