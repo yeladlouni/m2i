@@ -1,0 +1,6 @@
+Ecrire un script afin de:
+
+* Charger les employés depuis le fichier employees dans un DataFrame df
+* Remplacer les deux colonnes first_name et last_name avec une colonne name qui contient la concaténation
+ des deux colonnes first_name et last_name
+
