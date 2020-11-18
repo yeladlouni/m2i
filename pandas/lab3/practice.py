@@ -38,8 +38,7 @@ print(emp_list)
 print(df3['DEPARTMENT_ID'] == '50')
 
 # Afficher le nom complet des managers
-print('df3', df3)
-df4 = pd.DataFrame(df3, index=df3['EMPLOYEE_ID'])
-print('df4', df4)
-df3.drop(df4[df4['MANAGER_ID'] == ''].index)
-print(df4)
+df4 = df3[['EMPLOYEE_ID', 'FIRST_NAME', 'LAST_NAME', 'MANAGER_ID']]
+df5 = df4
+result = df3.merge(df4, left_on=['MANAGER_ID'], right_on=['EMPLOYEE_ID'], how='left')
+print(result[['FIRST_NAME_x', 'LAST_NAME_x', 'FIRST_NAME_y', 'LAST_NAME_y']])

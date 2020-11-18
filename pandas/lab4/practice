@@ -1,0 +1,7 @@
+Ecrire un script python afin de:
+
+* Créer une base de données hr
+* Créer deux tables employees et departments
+* Charger les données depuis les fichiers employees.csv et departments.csv
+* Afficher pour chaque employé son ID, first_name, last_name, department_title, department_name
+
