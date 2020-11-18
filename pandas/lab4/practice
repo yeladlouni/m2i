@@ -1,7 +1,7 @@
 Ecrire un script python afin de:
 
-* Créer une base de données hr
-* Créer deux tables employees et departments
+* Créer une base de données hr en utilisant sqlite3
+* Créer deux tables employees et departments en utilisant les colonnes spécifiées sur les deux fichiers employees.csv et departments.csv
 * Charger les données depuis les fichiers employees.csv et departments.csv
-* Afficher pour chaque employé son ID, first_name, last_name, department_title, department_name
+* Afficher pour chaque employé son ID, first_name, last_name, department_name en utilisant SQLAlchemy
 
