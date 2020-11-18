@@ -1,0 +1,19 @@
+Ecrire un script afin de:
+
+url: https://www.kaggle.com/manchunhui/us-election-2020-tweets
+
+* Charger les données twitter des élecions USA 2020 à partir des deux fichier hashtag_donaltrump.csv et hashtag_joebiden.csv
+* Créer un DataFrame qui contient l'ensemble des tweets
+* Effectuer un pré-traitement du dataframe pour enlever les doublons
+* En utilisant matplotlib ou seaborn, afficher des graphiques pour analyser le nombre de tweets, retweets, et le nombre de likes pour chaque antagoniste par mois
+* Interpréter les graphiques, est-ce que les résultats des élections sont conformes avec les tendances des likes, tweets et retweets
+* A partir du nombre de likes, quels mots ont été les plus utilisés dans les tweets
+
+Hint:
+
+On peut télécharger directement de python en utilisant urllib:
+
+
+import urllib.request
+
+urllib.request.urlretrieve('', 'hashtag.csv')
