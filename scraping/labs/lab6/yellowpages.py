@@ -11,5 +11,5 @@ class YellowPagesSpider(scrapy.Spider):
             company_name = company.css('div.row-denom > div.denomination.with-stars > h3 > a ::text').get()
             company_address = company.css('div.main-adresse-container.row-adresse.with-adresse.with-horaire-chaudes > div.adresse-container.noTrad > a ::text').get
 
-            yield {'name': company_name}
+            yield {'name': company_name.replace("\n", "")}
 
