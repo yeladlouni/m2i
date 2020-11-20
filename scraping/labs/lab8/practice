@@ -1,0 +1,4 @@
+Ecrire un script python en utilisant scrapy afin de:
+
+* Collecter les données de tripadvisor pour les hôtels à Las Vegas
+* Collecter les commentaires de Ceaser Palace
