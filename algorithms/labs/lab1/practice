@@ -1,0 +1,13 @@
+Ecrire une fonction récursive "triangle" afin d'afficher un triange isocèle avec des "*" où la base contient n étoiles
+
+          *
+         ***
+        *****
+       *******
+      *********
+     ***********
+    *************
+   ***************
+  *****************
+ *******************
+*********************
