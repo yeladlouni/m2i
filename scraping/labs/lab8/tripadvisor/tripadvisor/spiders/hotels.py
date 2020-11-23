@@ -1,19 +1,25 @@
-import scrapy
+from scrapy.spiders import CrawlSpider
+from scrapy import Request
 
-
-class HotelsSpider(scrapy.Spider):
+class HotelsSpider(CrawlSpider):
     name = 'hotels'
     allowed_domains = ['tripadvisor.fr']
     start_urls = ['https://www.tripadvisor.fr/Hotels-g45963-Las_Vegas_Nevada-Hotels.html']
 
-    # taplc_hsx_hotel_list_lite_dusty_hotels_combined_sponsored_0 > div > div:nth-child(3) > div > div.meta_listing.ui_columns.large_thumbnail_mobile.nonen > div.ui_column.is-8.main_col.allowEllipsis > div.main-cols > div.comm-col > div > div > div.premium_offer_container > div > div.priceBlock.ui_column.is-12-tablet > div.price-wrap > div
-    # taplc_hsx_hotel_list_lite_dusty_hotels_combined_sponsored_0 > div > div:nth-child(3) > div > div.meta_listing.ui_columns.large_thumbnail_mobile.nonen > div.ui_column.is-8.main_col.allowEllipsis > div.prw_rup.prw_meta_hsx_listing_name.listing-title > div
-    def parse(self, response):
-        hotels = response.css('listItem')
+    def parse_items(self, response):
+        hotels = response.css('div.listItem')
+        for item in hotels:
+            hotel = HotelItem()
 
-        for hotel in hotels:
-            hotel_name = hotel.css('div.listing_title > a ::text').get()
-            hotel_price = hotel.css('div.price ::text').get()
-            hotel_review = hotel.css('a.ui_bubble_rating ::alt').get()
-            print(hotel_name, hotel_price, hotel_review)
-            #hotel_price = hotels.css('')
+            hotel['name'] = item.css('div.listing_title a ::text').get()
+            hotel['review'] = item.css('a.ui_bubble_rating ::attr(alt)').get()
+            hotel['reviewCount'] = item.css('a.review_count ::text').get()
+
+            next_page = response.css('a.next ::attr(href)').get()
+
+            if next_page:
+                print(response)
+                next_page = response.urljoin(next_page)
+                yield Request(url=next_page, callback=self.parse)
+
+            return hotel
