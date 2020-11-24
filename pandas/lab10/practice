@@ -1,0 +1,29 @@
+Ecrire un script python afin de:
+
+* Télécharger les données depuis kaagle du dataset movies: https://www.kaggle.com/rounakbanik/the-movies-dataset?select=links.csv
+* Décompresser les fichiers csv dans un dossier data
+* Utiliser pandas pour lire les fichiers sous format dataframe
+* Créer un DataFrame global contenant les colonnes suivantes:
+ - Id du film
+ - Nom du film
+ - Date de production
+ - Liste des genres de chaque film
+ - Rating (note sur 5)
+ - Budget du film
+ - Mots clés du film
+
+Cleansing:
+
+* Imputer les valeurs manquantes en utilisant le mode pour les variable categorical et la moyenne
+pour les variables continues
+* Supprimer les doublons
+
+Wrangling:
+
+- Créer un dataframe contenant pour chaque année/catégorie, le nombre de films
+- Pour chaque mot clé, afficher le nombre de films le contenant
+- Ajouter une colonne pour les paliers de budgets: [0, 30000000, 50000000, 16000000, 30250000], ['Négligeable', 'Modéré', 'Elevé', 'Colossal']
+- Créer un DataFrame contenant pour chaque mot clé et chaque rating, afficher le nombre total de films
+- Quels sont les mots clés qui caractérisent chaque catégorie (*****) ==> on peut utiliser le dataviz pour l'analyse
+- Est-ce que le budget impacte l'appréciation générale pour un film (*****)
+- Est-ce qu'il y a une corrélation entre le budget et la catégorie du film (*****)
