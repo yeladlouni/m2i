@@ -1,0 +1,20 @@
+Ecrire un script en utilisant pandas afin de générer un numéro de série pour chaque produit.
+Le numéro de série est composé de la première lettre de la catégorie et un numéro aléatoire composé de 10 digits.
+Exemple C2938388890 Pour un produit de la catégorie 'computer'
+
+le dataset:
+
+data = pd.DataFrame({'product': ['macbook', 'hp deskjet', 'canon', 'ipad', 'iphone 12', 'samsung s20', 'xbox'],
+                     'price': [1500.00, 100.12, 500.99, 350.50, 569.99, 600.20, 330.12]})
+
+le mapping entre product et category est:
+
+product_category = {
+    'MacBook': 'computer',
+    'HP Deskjet': 'computer',
+    'Canon': 'photography',
+    'iPad': 'computer',
+    'iPhone 12': 'phones',
+    'Samsung s20': 'phones',
+    'XBox': 'gaming'
+}
