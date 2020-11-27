@@ -1,0 +1,51 @@
+1. Copier les données sur HDFS
+
+hadoop fs -mkdir /user/yassine/hr
+
+hadoop fs -copyFromLocal employees.csv /user/yassine/hr
+
+2. Vérifier que le fichier a été copié
+
+hadoop fs -ls /user/yassine/hr
+
+3. Création de la table externe:
+
+CREATE EXTERNAL TABLE IF NOT EXISTS employees (
+        first_name STRING,
+        last_name STRING,
+        email STRING,
+        phone_number STRING,
+        hire_date DATE,
+        job_id INT,
+        salary DECIMAL,
+        commission_pct DECIMAL,
+        manager_id INT,
+        department_id INT)
+    COMMENT 'Data about cars from a public database'
+    ROW FORMAT DELIMITED
+    FIELDS TERMINATED BY ','
+    STORED AS TEXTFILE
+    location '/user/yassine/hr';
+
+4. Création de la table ORC:
+
+CREATE TABLE IF NOT EXISTS employees (
+        first_name STRING,
+        last_name STRING,
+        email STRING,
+        phone_number STRING,
+        hire_date DATE,
+        job_id INT,
+        salary DECIMAL,
+        commission_pct DECIMAL,
+        manager_id INT,
+        department_id INT)
+    COMMENT 'Data about employees from hr database'
+    ROW FORMAT DELIMITED
+    FIELDS TERMINATED BY ';'
+    STORED AS ORC;
+
+
+5. Insérer les données depuis les tables externes
+
+INSERT OVERWRITE TABLE mycars SELECT * FROM cars;
