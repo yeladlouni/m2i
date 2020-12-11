@@ -5,3 +5,4 @@ https://bionlp.nlm.nih.gov/epic_qa/data/epic_qa_cord_2020-10-22-split-corrected.
 * Extraire les documents JSON
 * Indexer les documents sur elasticsearch
 * Afficher les documents qui parlent du vaccin COVID19
+** Surligner les phrases en question
