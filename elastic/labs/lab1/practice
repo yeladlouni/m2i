@@ -1,0 +1,6 @@
+Ecrire un script python afin de:
+
+* Télécharger les données CORD19 relatives aux articles scientifiques COVID19
+* Extraire les documents JSON
+* Indexer les documents sur elasticsearch
+* Afficher les documents qui parlent du vaccin COVID19
