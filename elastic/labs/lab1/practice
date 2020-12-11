@@ -1,6 +1,7 @@
 Ecrire un script python afin de:
 
 * Télécharger les données CORD19 relatives aux articles scientifiques COVID19
+https://bionlp.nlm.nih.gov/epic_qa/data/epic_qa_cord_2020-10-22-split-corrected.tar.gz
 * Extraire les documents JSON
 * Indexer les documents sur elasticsearch
 * Afficher les documents qui parlent du vaccin COVID19
