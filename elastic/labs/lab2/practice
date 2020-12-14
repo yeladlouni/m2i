@@ -1,0 +1,12 @@
+Télécharger les données movies si ce n'est pas déjà fait et effectuer les tâches suivantes:
+
+* Dessiner sur papier le modèle conceptuel qui permet de stocker les données du dataset (movies, credits, ratings...)
+* Mettre en place le modèle logique et physique de données
+* Ecrire un script pour créer les différentes tables et les différentes requêtes:
+    - Q1: Trouver les films par date de production
+    - Q2: Trouver les films par acteur
+    - Q3: Trouver les films par titres
+* Ecrire un script CQL afin d'insérer le dataset dans la base cassandra crée
+* Ecrire un script Python qui permet de charger les mêmes données sur Elasticsearch
+* Ecrire un script qui permet de charger les données sur Spark
+* Ecrire un fonction qui permet de renvoyer pour chaque mot clé, l'ensemble des films qui les contiennent
