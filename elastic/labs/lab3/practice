@@ -1,0 +1,7 @@
+Ecrire des requêtes REST API pour analyser les données bigginsight:
+
+* Afficher le total d'usage par département et par catégorie
+* Pour la catégorie Chat, afficher le nombre distinct d'utilisateurs "username"
+* Afficher le nombre de connexions qui ont eu une inactivité de [0,2000], [3000,5000] et de [5000, 10000]
+* Afficher par semaine et par département le total d'usage
+
