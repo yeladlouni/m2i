@@ -4,4 +4,125 @@ Ecrire des requêtes REST API pour analyser les données bigginsight:
 * Pour la catégorie Chat, afficher le nombre distinct d'utilisateurs "username"
 * Afficher le nombre de connexions qui ont eu une inactivité de [0,2000], [3000,5000] et de [5000, 10000]
 * Afficher par semaine et par département le total d'usage
+* Afficher pour les connexions effectuée depuis les USA le total d'usage
 
+
+1.
+
+GET /bigginsight/_search
+{
+  "aggs": {
+    "byDepartment": {
+      "terms": {
+        "field": "department.keyword"
+      },
+      "aggs": {
+        "byCategory": {
+          "terms": {
+            "field": "category.keyword"
+          },
+          "aggs": {
+            "totalUsage": {
+              "sum": {
+                "field": "usage"
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "size": 0
+}
+
+2.
+
+GET /bigginsight/_search
+{
+  "query": {
+    "match": {
+      "category.keyword": "Chat"
+    }
+  },
+  "aggs": {
+    "distinct_users": {
+      "cardinality": {
+        "field": "username.keyword"
+      }
+    }
+  },
+  "size": 0
+}
+
+3.
+
+GET /bigginsight/_search
+{
+  "aggs": {
+    "byInactivity": {
+      "range": {
+        "field": "inactiveMs",
+        "ranges": [
+          {"key": "I1","to": 2000},
+          {"key": "I2","from": 3000, "to": 5000},
+          {"key": "I3","from": 5000}
+        ]
+      }
+    }
+  },
+  "size": 0
+}
+
+
+4.
+
+GET /bigginsight/_search
+{
+  "aggs": {
+    "byDepartment": {
+      "terms": {
+        "field": "department.keyword"
+      },
+      "aggs": {
+        "byWeek": {
+          "date_histogram": {
+            "field": "time",
+            "calendar_interval": "1w"
+          },
+          "aggs": {
+            "totalUsage": {
+              "sum": {
+                "field": "usage"
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "size": 0
+}
+
+
+5.
+
+GET /bigginsight/_search
+{
+  "aggs": {
+    "byLocation": {
+      "geo_distance": {
+        "field": "location",
+        "origin": {
+          "lat": 46.048910,
+          "lon": -97.322533
+        },
+        "ranges": [
+          {
+            "to": 20000000
+          }
+        ]
+      }
+    }
+  },
+  "size": 0
+}
