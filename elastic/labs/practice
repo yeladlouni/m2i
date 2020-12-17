@@ -1,0 +1,5 @@
+Charger les données des cas Covid19 depuis le site
+https://www.worldometers.info/coronavirus/
+
+* Afficher par continent le nombre de cas, le nombre de morts et le nombre de tests effectués
+* Afficher sur la carte pour chaque pays le nombre de cas
