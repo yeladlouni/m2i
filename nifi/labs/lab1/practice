@@ -1,0 +1,5 @@
+* Mettre en place un dataflow nifi pour:
+    - décompresser le fichier tar téléchargé
+    - Lister les fichiers contenus dans le dossier obtenu
+    - Logger la liste dans le fichier logs nifi
+
