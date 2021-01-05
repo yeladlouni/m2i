@@ -1,0 +1,5 @@
+Mettre en place un dataflow sur NIFI afin de :
+
+- Charger les produits sur une indexe Elastic
+- Calculer le nombre de produits par catégorie
+- Envoyer un mail contenant le nombre de produits par catégorie
